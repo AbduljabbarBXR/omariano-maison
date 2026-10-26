@@ -1,0 +1,109 @@
+{
+ "updated": "2026-10-25",
+ "total": 288,
+ "inStock": 195,
+ "collections": [
+  {
+   "key": "quran",
+   "label": "Qur'an",
+   "blurb": "Translations, tafsir and tracing editions for a deeper read.",
+   "count": 15,
+   "cover": "assets/covers/220.webp"
+  },
+  {
+   "key": "children",
+   "label": "Children's Library",
+   "blurb": "Stories, workbooks and first libraries for young readers.",
+   "count": 61,
+   "cover": "assets/covers/162.webp"
+  },
+  {
+   "key": "adult",
+   "label": "Adult Books",
+   "blurb": "Seerah, theology, spirituality and the life of the mind.",
+   "count": 164,
+   "cover": "assets/covers/22.webp"
+  },
+  {
+   "key": "business",
+   "label": "Business & Self-Help",
+   "blurb": "Habits, leadership and work that lasts.",
+   "count": 32,
+   "cover": "assets/covers/61.webp"
+  },
+  {
+   "key": "fiction",
+   "label": "Fiction",
+   "blurb": "Novels and voices from near and far.",
+   "count": 11,
+   "cover": "assets/covers/342.webp"
+  },
+  {
+   "key": "essentials",
+   "label": "Islamic Essentials",
+   "blurb": "Oils, reading stands and quiet tools for daily practice.",
+   "count": 5,
+   "cover": "assets/covers/280.webp"
+  }
+ ],
+ "hero": [
+  255,
+  22,
+  23
+ ],
+ "edit": [
+  257,
+  22,
+  23,
+  74,
+  342,
+  220,
+  232,
+  280
+ ],
+ "picks": [
+  255,
+  23,
+  74,
+  208
+ ],
+ "children": [
+  162,
+  172,
+  171,
+  177
+ ],
+ "new": [
+  348,
+  346,
+  345,
+  341,
+  342,
+  340,
+  339,
+  338
+ ],
+ "brands": [
+  "Artistry Taints",
+  "Claritas Book",
+  "Daqwah Corner Bookstore",
+  "Dar as-Sunnah publishers",
+  "Darusalam UK",
+  "GETMY365",
+  "Goodword",
+  "IIPH",
+  "Ibn Daud Books",
+  "International Islamic Publishing House",
+  "KaryaBestari",
+  "Omariano Bookstore Limited",
+  "Omariano Selection",
+  "Qur'an Trace",
+  "TA-HA Publishers",
+  "Tughra books",
+  "kube publishing house"
+ ],
+ "whatsapp": "254794677029",
+ "phone": "+254 794 677 029",
+ "email": "info@omariano.com",
+ "address": "Salma Hotel Building, Ole Shapara Avenue, South C, Nairobi"
+}
