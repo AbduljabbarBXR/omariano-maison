@@ -93,5 +93,30 @@
     }
   }
 
-  document.addEventListener("om:ready", render);
+  function startHeroRotator() {
+    const image = document.querySelector("#hero-rotator");
+    if (!image) return;
+    const products = window.OM.state.products.filter((product) => product.image);
+    if (!products.length) return;
+    let index = products.findIndex((product) => String(product.id) === "22") + 1;
+    if (index <= 0 || index >= products.length) index = 0;
+    window.clearInterval(window.__heroRotatorTimer);
+    window.__heroRotatorTimer = window.setInterval(() => {
+      const product = products[index];
+      const preload = new Image();
+      preload.onload = () => {
+        image.src = product.image;
+        image.alt = product.title;
+      };
+      preload.src = product.image;
+      index = (index + 1) % products.length;
+    }, 3200);
+  }
+
+  function renderWithRotator() {
+    render();
+    startHeroRotator();
+  }
+
+  document.addEventListener("om:ready", renderWithRotator);
 })();

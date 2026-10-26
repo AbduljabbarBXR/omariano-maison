@@ -4240,3 +4240,7 @@ dialog::backdrop {
     font-size: 1.8rem;
   }
 }
+
+/* Rotating hero cover */
+.hero__book--b { aspect-ratio: 5 / 7; }
+.hero__book--b img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
