@@ -1,4 +1,4 @@
-/* Omariano Maison — homepage sections built from the real catalogue. */
+/* Omariano Bookshop | homepage sections built from the real catalogue. */
 
 (function () {
   "use strict";

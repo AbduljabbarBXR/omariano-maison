@@ -219,8 +219,8 @@ def make_og(covers: dict[int, Path], fonts: Path, assets: Path) -> None:
     sans = load_font(fonts / "Manrope.ttf", 19, 600)
     sans_small = load_font(fonts / "Manrope.ttf", 15, 500)
 
-    draw.text((74, 190), "A HOUSE OF BOOKS · NAIROBI", font=sans_small, fill="#A77B32")
-    draw.text((72, 222), "A house of books", font=serif, fill="#14213D")
+    draw.text((74, 190), "OMARIANO BOOKSHOP · NAIROBI", font=sans_small, fill="#A77B32")
+    draw.text((72, 222), "A bookshop for the", font=load_font(fonts / "Cormorant.ttf", 68, 600), fill="#14213D")
     draw.text((72, 294), "for the life of the soul.", font=italic, fill="#1B4FA0")
     draw.text(
         (74, 404),
@@ -230,7 +230,7 @@ def make_og(covers: dict[int, Path], fonts: Path, assets: Path) -> None:
         spacing=8,
     )
     draw.line((74, 492, 600, 492), fill="#D9C8A8", width=2)
-    draw.text((74, 512), "OMARIANO BOOKSTORE  ·  SOUTH C, NAIROBI", font=sans_small, fill="#A77B32")
+    draw.text((74, 512), "OMARIANO BOOKSHOP  ·  SOUTH C, NAIROBI", font=sans_small, fill="#A77B32")
     draw.text((74, 552), "omariano.com", font=sans, fill="#14213D")
 
     # Three framed covers on the right.

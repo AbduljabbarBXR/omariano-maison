@@ -1,4 +1,4 @@
-/* Omariano Maison — catalogue filtering, sorting and load-more. */
+/* Omariano Bookshop | catalogue filtering, sorting and load-more. */
 
 (function () {
   "use strict";

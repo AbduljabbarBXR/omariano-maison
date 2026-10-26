@@ -1,6 +1,6 @@
-# Omariano Maison
+# Omariano Bookshop
 
-A static, multi-page storefront for **Omariano Bookstore**, South C, Nairobi. Built as a client-facing design preview of the “Omariano Maison” concept: a warm, editorial house of books using the bookstore’s real catalogue and cover images.
+A static, multi-page storefront for **Omariano Bookshop**, South C, Nairobi. Built as a client-facing design preview of the Omariano Bookshop concept: a warm, editorial bookshop for readers using the bookshop’s real catalogue and cover images.
 
 **Live preview:** <https://omariano-maison.netlify.app>
 
@@ -8,14 +8,14 @@ A static, multi-page storefront for **Omariano Bookstore**, South C, Nairobi. Bu
 
 ## What is here
 
-- `index.html` — editorial homepage with hero, collections, The Omariano Edit, house pick, new arrivals, children’s shelf and visit details.
-- `shop.html` — full catalogue with collection, price, availability and offer filters, search, sorting and load-more.
-- `about.html` — the story of the house.
-- `contact.html` — visit details, contact form, FAQ and directions.
-- `404.html` — branded fallback page.
-- `data/products.json` — 288 published products from the September 2026 store backup.
-- `data/site.json` — collection counts, curated selections and house details.
-- `assets/covers/` — optimised WebP cover images for every product.
+- `index.html`: editorial homepage with hero, collections, The Omariano Edit, bookshop pick, new arrivals, children’s shelf and visit details.
+- `shop.html`: full catalogue with collection, price, availability and offer filters, search, sorting and load-more.
+- `about.html`: the story of the bookshop.
+- `contact.html`: visit details, contact form, FAQ and directions.
+- `404.html`: branded fallback page.
+- `data/products.json`: 288 published products from the September 2026 store backup.
+- `data/site.json`: collection counts, curated selections and shop details.
+- `assets/covers/`: optimised WebP cover images for every product.
 
 ## Run locally
 
@@ -41,7 +41,7 @@ All DB discounts were fixed-amount and expired at the time of extraction, but th
 
 **Real:** catalogue, covers, categories, stock status, prices, phone number, email, address, social links, WhatsApp ordering.
 
-**Placeholder / preview copy:** the “Maison” editorial voice, collection blurbs, curated selection, opening hours, the free-delivery-over-KES-5,000 promise, payment wording, FAQ answers and the newsletter/contact forms. These should be confirmed with the Omariano team before the site replaces the live store.
+**Placeholder / preview copy:** the bookshop editorial voice, collection blurbs, curated selection, opening hours, the free-delivery-over-KES-5,000 promise, payment wording, FAQ answers and the newsletter/contact forms. These should be confirmed with the Omariano team before the site replaces the live store.
 
 The contact and newsletter forms are front-end only. The contact form opens the visitor’s email app with a pre-filled message to `info@omariano.com`; orders are completed over WhatsApp or by phone. There is no server-side checkout.
 
@@ -67,7 +67,7 @@ Push the repository to GitHub and enable Pages with **Source: Deploy from a bran
 
 ## Notes for the next iteration
 
-- Replace placeholder policies and delivery wording with the bookstore’s confirmed terms.
+- Replace placeholder policies and delivery wording with the bookshop’s confirmed terms.
 - Confirm opening hours and whether Sunday trading applies.
 - Decide whether to keep the `noindex` robots meta while this is a private client preview.
 - If a real checkout is needed later, connect the catalogue to the live Active eCommerce backend instead of maintaining a static snapshot.

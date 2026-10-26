@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Omariano Maison — shared storefront behaviour
+   Omariano Bookshop | shared storefront behaviour
    Catalogue, search, product dialog, shopping bag and small UI details.
    ========================================================================== */
 
@@ -146,7 +146,7 @@
         const input = $("input[type='email']", form);
         const note = $("[data-newsletter-note]", form.parentElement) || $("[data-newsletter-note]");
         if (!input || !input.value.trim()) return;
-        if (note) note.textContent = "Thank you — the house will be in touch.";
+        if (note) note.textContent = "Thank you. The bookshop will be in touch.";
         form.reset();
       });
     });
@@ -173,10 +173,10 @@
       lines.push("", message);
       const body = lines.join("\n");
       const href = `mailto:info@omariano.com?subject=${encodeURIComponent(
-        `Website enquiry — ${topic}`
+        `Website enquiry: ${topic}`
       )}&body=${encodeURIComponent(body)}`;
       if (note) {
-        note.textContent = "Opening your email app — send the message and the house will reply.";
+        note.textContent = "Opening your email app. Send the message and the bookshop will reply.";
       }
       window.location.href = href;
     });
@@ -195,7 +195,7 @@
     const suggestions = ["Qur’an", "Seerah", "Children", "Fiction", "Self-help"];
 
     const suggestionMarkup = () => `
-      <p class="search-hint">Popular in the house</p>
+      <p class="search-hint">Popular in the bookshop</p>
       <div class="search-suggestions">
         ${suggestions.map((term) => `<button type="button" data-search-term="${esc(term)}">${esc(term)}</button>`).join("")}
       </div>`;
@@ -295,7 +295,7 @@
   function badgeFor(product) {
     if (!product.inStock) return '<span class="badge badge--out">Out of stock</span>';
     if (product.isNew) return '<span class="badge badge--new">New</span>';
-    if (product.featured) return '<span class="badge badge--pick">House pick</span>';
+    if (product.featured) return '<span class="badge badge--pick">Bookshop pick</span>';
     if (product.compareAt) return `<span class="badge badge--sale">Save ${money(product.save)}</span>`;
     return "";
   }
@@ -366,9 +366,9 @@
       .join("");
 
     const availability = !product.inStock
-      ? "Out of stock — call to reserve"
+      ? "Out of stock. Call to reserve"
       : product.lowStock
-      ? `Only ${product.stock} left in the house`
+      ? `Only ${product.stock} left in the bookshop`
       : "In stock";
 
     const related = relatedFor(product);
@@ -396,7 +396,7 @@
               <button type="button" data-pd-qty="1" aria-label="Increase quantity">+</button>
             </div>
             <button class="btn btn--primary" type="button" data-pd-add="${product.id}" ${product.inStock ? "" : "disabled"}>
-              ${product.inStock ? `Add to bag — ${money(product.price)}` : "Out of stock"}
+              ${product.inStock ? `Add to bag · ${money(product.price)}` : "Out of stock"}
             </button>
           </div>
           <dl class="pd__meta">
@@ -404,7 +404,7 @@
             <div><dt>Publisher</dt><dd>${esc(product.brand)}</dd></div>
             <div><dt>Delivery</dt><dd>Nairobi &amp; countrywide</dd></div>
           </dl>
-          <p class="pd__note">Not sure if this is the right book for you? Call the house on <a href="tel:+254794677029" style="text-decoration:underline;text-underline-offset:3px">+254 794 677 029</a> and we’ll help you choose.</p>
+          <p class="pd__note">Not sure if this is the right book for you? Call the bookshop on <a href="tel:+254794677029" style="text-decoration:underline;text-underline-offset:3px">+254 794 677 029</a> and we’ll help you choose.</p>
         </div>
       </div>
       ${
@@ -564,9 +564,9 @@
     const remaining = Math.max(0, DELIVERY_THRESHOLD - subtotal);
     const progress = Math.min(100, (subtotal / DELIVERY_THRESHOLD) * 100);
     const orderLines = items
-      .map(({ product, qty }) => `• ${product.title} × ${qty} — ${money(product.price * qty)}`)
+      .map(({ product, qty }) => `• ${product.title} × ${qty} · ${money(product.price * qty)}`)
       .join("\n");
-    const message = `Hello Omariano, I'd like to order:\n\n${orderLines}\n\nSubtotal: ${money(subtotal)}\n\n(Sent from the Omariano Maison preview)`;
+    const message = `Hello Omariano, I'd like to order:\n\n${orderLines}\n\nSubtotal: ${money(subtotal)}\n\n(Sent from the Omariano Bookshop preview)`;
     const whatsapp = state.site?.whatsapp || "254794677029";
 
     foot.innerHTML = `
