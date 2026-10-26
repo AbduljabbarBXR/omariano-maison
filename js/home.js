@@ -19,11 +19,15 @@
     const collections = document.querySelector("#collection-grid");
     if (collections) {
       collections.innerHTML = site.collections
-        .map(
-          (collection) => `
+        .map((collection) => {
+          const covers = OM.state.products
+            .filter((product) => product.collection === collection.key && product.image)
+            .slice(0, 3);
+          const itemMode = collection.key === "essentials";
+          return `
         <a class="collection-card" href="shop.html?collection=${encodeURIComponent(collection.key)}">
-          <div class="collection-card__media">
-            <img src="${OM.escape(collection.cover)}" alt="" loading="lazy">
+          <div class="collection-card__media ${itemMode ? "collection-card__media--items" : "collection-card__media--stack"}">
+            ${covers.map((product, index) => `<img class="collection-card__cover ${itemMode ? "collection-card__item" : `collection-card__cover--${index + 1}`}" src="${OM.escape(product.image)}" alt="" loading="lazy">`).join("")}
           </div>
           <div class="collection-card__body">
             <span class="collection-card__count">${collection.count} ${OM.plural(collection.count, "title")}</span>
@@ -33,8 +37,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </span>
           </div>
-        </a>`
-        )
+        </a>`;
+        })
         .join("");
     }
 
@@ -93,30 +97,5 @@
     }
   }
 
-  function startHeroRotator() {
-    const image = document.querySelector("#hero-rotator");
-    if (!image) return;
-    const products = window.OM.state.products.filter((product) => product.image);
-    if (!products.length) return;
-    let index = products.findIndex((product) => String(product.id) === "22") + 1;
-    if (index <= 0 || index >= products.length) index = 0;
-    window.clearInterval(window.__heroRotatorTimer);
-    window.__heroRotatorTimer = window.setInterval(() => {
-      const product = products[index];
-      const preload = new Image();
-      preload.onload = () => {
-        image.src = product.image;
-        image.alt = product.title;
-      };
-      preload.src = product.image;
-      index = (index + 1) % products.length;
-    }, 3200);
-  }
-
-  function renderWithRotator() {
-    render();
-    startHeroRotator();
-  }
-
-  document.addEventListener("om:ready", renderWithRotator);
+  document.addEventListener("om:ready", render);
 })();

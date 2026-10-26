@@ -62,7 +62,7 @@ COLLECTIONS = {
         "cover": 342,
     },
     "essentials": {
-        "label": "Islamic Essentials",
+        "label": "Essentials",
         "blurb": "Oils, reading stands and quiet tools for daily practice.",
         "cover": 280,
     },
@@ -94,7 +94,7 @@ CAT_LABEL = {
     57: "Qur'an",
     51: "Business & Self-Help",
     52: "Fiction",
-    59: "Islamic Essentials",
+    59: "Essentials",
     60: "Games",
 }
 

@@ -8,42 +8,42 @@
    "label": "Qur'an",
    "blurb": "Translations, tafsir and tracing editions for a deeper read.",
    "count": 15,
-   "cover": "assets/covers/220.webp"
+   "cover": "assets/covers/220.webp?v=8"
   },
   {
    "key": "children",
    "label": "Children's Library",
    "blurb": "Stories, workbooks and first libraries for young readers.",
    "count": 61,
-   "cover": "assets/covers/162.webp"
+   "cover": "assets/covers/162.webp?v=8"
   },
   {
    "key": "adult",
    "label": "Adult Books",
    "blurb": "Seerah, theology, spirituality and the life of the mind.",
    "count": 164,
-   "cover": "assets/covers/22.webp"
+   "cover": "assets/covers/22.webp?v=8"
   },
   {
    "key": "business",
    "label": "Business & Self-Help",
    "blurb": "Habits, leadership and work that lasts.",
    "count": 32,
-   "cover": "assets/covers/61.webp"
+   "cover": "assets/covers/61.webp?v=8"
   },
   {
    "key": "fiction",
    "label": "Fiction",
    "blurb": "Novels and voices from near and far.",
    "count": 11,
-   "cover": "assets/covers/342.webp"
+   "cover": "assets/covers/342.webp?v=8"
   },
   {
    "key": "essentials",
-   "label": "Islamic Essentials",
+   "label": "Essentials",
    "blurb": "Oils, reading stands and quiet tools for daily practice.",
    "count": 5,
-   "cover": "assets/covers/280.webp"
+   "cover": "assets/covers/280.webp?v=8"
   }
  ],
  "hero": [
