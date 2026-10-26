@@ -2,7 +2,9 @@
 
 A static, multi-page storefront for **Omariano Bookstore**, South C, Nairobi. Built as a client-facing design preview of the “Omariano Maison” concept: a warm, editorial house of books using the bookstore’s real catalogue and cover images.
 
-**Live preview:** _to be added after deployment_
+**Live preview:** <https://omariano-maison.netlify.app>
+
+**Source:** <https://github.com/AbduljabbarBXR/omariano-maison>
 
 ## What is here
 
